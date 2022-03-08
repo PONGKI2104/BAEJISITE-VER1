@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>테트리스게임</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/tetris.css">
+    <script type="text/javascript" src="js/tetris.js"></script>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+        <style>
+                @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    
+    .jm-font{
+        font-family: 'Black Han Sans', sans-serif;/*웹 폰트 지정*/
+        color: black;
+    }
+            #wrapper{
+                width:300px;
+                margin:auto;
+            }
+            #txtContact{
+                width:fit-content;
+                margin:auto;
+            }
+            #btnSubmit{
+                width:100px;
+                margin:auto;
+                display:block;
+            }
+        .hr-sect {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.35);
+            font-size: 12px;
+            margin: 8px 0px;
+          }
+          .hr-sect::before,
+          .hr-sect::after {
+            content: "";
+            flex-grow: 1;
+            background: rgba(0, 0, 0, 0.35);
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            margin: 0px 16px;
+          }
+        </style>
+    
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>지환이 사이트</title>
+    </head>
+    
+     
+        <header class="header">
+            <div class="header__logo">
+                <a href="#">
+                    <h1>BAEJI</h1>
+                    <p>BAEJIHWAN SMART</p>
+                </a>
+            </div>
+            <div class="heder__gnb">
+                <ul>
+    
+            </div>
+        </header>
+    <br>
+    <br>
+    <h1></h1>
+    <div class="wrapper-container">
+        <span class="tetris-container">
+            <canvas id="stage" width="250px" height="500px" style="background-color:black;">
+            </canvas>
+            <span class="tetris-panel-container">
+              <p>다음:</p>
+                <canvas id="next" width="150px" height="150px" style="background-color:black;">
+                </canvas>
+              <p>LINES:<span id="lines">0</span></p>
+              <p><span id="message"></span></p>
+              <div class="tetris-panel-container-padding"></div>
+              <table class="tetris-button-panel">
+                <tr>
+                  <td></td>
+                  <td id="tetris-rotate-button" class="tetris-button">↻</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td id="tetris-move-left-button"class="tetris-button">←</td>
+                  <td id="tetris-fall-button"class="tetris-button">↓</td>
+                  <td id="tetris-move-right-button"class="tetris-button">→</td>
+                </tr>
+              </table>
+            </span>
+        </span>
+    </div>
+    <script>
+      var tetris = new Tetris();
+      tetris.startGame();
+    </script>
+  </body>
+</html>
+  </body>
+</html>

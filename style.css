@@ -1,0 +1,43 @@
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.header {
+    height: 155px;
+    text-align: center;
+    background-color:rgb(221, 255, 252);
+    border-bottom: 1px solid #999;
+}
+
+.header__logo h1 {
+    font: bold 40px 'arial';
+    padding-top: 14px;
+    letter-spacing: 2px;
+
+}
+
+.header__logo p {
+    font: bold 12px 'arial';
+    padding-top: 14px;
+    letter-spacing: 2px;
+
+}
+
+.header_ghb ul {
+    margin-top: 40px;
+
+}
+
+.header__gnb ul li {
+    display: inline-block;
+}
+
+.header__gnb ul li a{
+    display: block;
+    font: bold 14px 'arial';
+    color: #999;
+    margin: 0px 16px;
+}

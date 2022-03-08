@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+			@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+.jm-font{
+	font-family: 'Black Han Sans', sans-serif;/*웹 폰트 지정*/
+	color: black;
+}
+		#wrapper{
+			width:300px;
+			margin:auto;
+		}
+		#txtContact{
+			width:fit-content;
+			margin:auto;
+		}
+		#btnSubmit{
+			width:100px;
+			margin:auto;
+			display:block;
+		}
+    .hr-sect {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 12px;
+        margin: 8px 0px;
+      }
+      .hr-sect::before,
+      .hr-sect::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+      }
+	</style>
+
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>지환이 사이트</title>
+</head>
+
+ 
+    <header class="header">
+        <div class="header__logo">
+            <a href="#">
+                <h1>BAEJI</h1>
+                <p>BAEJIHWAN SMART</p>
+            </a>
+        </div>
+        <div class="heder__gnb">
+            <ul>
+
+        </div>
+    </header>
+<br>
+<br>
+<style>
+
+	
+
+* {margin:0;padding:0;box-sizing:border-box;}
+	ul, li {list-style:none;}
+	
+	[name="slide"] {display:none;}
+	.slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
+	.slidebox img {max-width:100%;}
+	.slidebox .slidelist {
+		white-space:nowrap;
+		font-size:0;
+		overflow:hidden;
+	}
+	.slidebox .slideitem {
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		width:100%;
+		transition:all .35s;
+	}
+	.slidebox .slideitem label {
+		position:absolute;
+		z-index:1;
+		top:50%;
+		transform:translateY(-50%);
+		padding:20px;
+		border-radius:50%;
+		cursor:pointer;
+	}
+	label.left {
+		left:20px;
+		background-color:#5F5F5F;
+		background-image:url('./img/left-arrow.png');
+		background-position:center center;
+		background-size:50%;
+		background-repeat:no-repeat;
+	}
+	label.right {
+		right:20px;
+		background-color:#5F5F5F;
+		background-image:url('./img/right-arrow.png');
+		background-position:center center;
+		background-size:50%;
+		background-repeat:no-repeat;
+	}
+	
+	/* 페이징 스타일 */
+	.paginglist {text-align:center;padding:30px 0;}
+	.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+	.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+	.paginglist > li:hover > label {background:#333;}
+	
+	[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+	[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+	[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+	[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+	
+	@keyframes slide01 {
+		0% {left:0%;}
+		23% {left:0%;}
+		25% {left:-100%;}
+		48% {left:-100%;}
+		50% {left:-200%;}
+		73% {left:-200%;}
+		75% {left:-300%;}
+		98% {left:-300%;}
+		100% {left:0%;}
+	}
+	@keyframes slide02 {
+		0% {left:0%;}
+		23% {left:0%;}
+		25% {left:-100%;}
+		48% {left:-100%;}
+		50% {left:-200%;}
+		73% {left:-200%;}
+		75% {left:100%;}
+		98% {left:100%;}
+		100% {left:0%;}
+	}
+	@keyframes slide03 {
+		0% {left:0%;}
+		23% {left:0%;}
+		25% {left:-100%;}
+		48% {left:-100%;}
+		50% {left:200%;}
+		73% {left:200%;}
+		75% {left:100%;}
+		98% {left:100%;}
+		100% {left:0%;}
+	}
+	@keyframes slide04 {
+		0% {left:0%;}
+		23% {left:0%;}
+		25% {left:300%;}
+		48% {left:300%;}
+		50% {left:200%;}
+		73% {left:200%;}
+		75% {left:100%;}
+		98% {left:100%;}
+		100% {left:0%;}
+	}
+	</style>
+	
+	<div class="slidebox">
+		<input type="radio" name="slide" id="slide01" checked>
+		<input type="radio" name="slide" id="slide02">
+		<input type="radio" name="slide" id="slide03">
+		<input type="radio" name="slide" id="slide04">
+		<ul class="slidelist">
+			<li class="slideitem">
+				<div>
+					<label for="slide04" class="left"></label>
+					<label for="slide02" class="right"></label>
+					<a><img src="./img/slide01.jpg"></a>
+				</div>
+			</li>
+			<li class="slideitem">
+				<div>
+					<label for="slide01" class="left"></label>
+					<label for="slide03" class="right"></label>
+					<a><img src="./img/slide02.jpg"></a>
+				</div>
+			</li>
+			<li class="slideitem">
+				<div>
+					<label for="slide02" class="left"></label>
+					<label for="slide04" class="right"></label>
+					<a><img src="./img/slide03.jpg"></a>
+				</div>
+			</li>
+			<li class="slideitem">
+				<div>
+					<label for="slide03" class="left"></label>
+					<label for="slide01" class="right"></label>
+					<a><img src="./img/slide04.jpg"></a>
+				</div>
+			</li>
+		</ul>
+		<!-- <ul class="paginglist">
+			<li>
+				<label for="slide01"></label>
+			</li>
+			<li>
+				<label for="slide02"></label>
+			</li>
+			<li>
+				<label for="slide03"></label>
+			</li>
+			<li>
+				<label for="slide04"></label>
+			</li>
+		</ul> -->
+	</div>
+	
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div style=" text-align: center;">
+		<div style=" text-align: center;"> 
+		
+    
+			<div class="hr-sect">예제코드</div>
+			<br>
+			<br>
+			<br>
+	<a href="1.html" target="_blank" class="con_link">
+		<button style="background-color: #A6EA40; padding: 10px 50px 10px 50px;">	<p class="jm-font">지키백과 예제코드보러가기</p></button>
+		</a></div>	&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		<div style=" text-align: center;">
+		<a href="webhotpack.html" target="_blank" class="con_link">
+			<button style="background-color: #A6EA40; padding: 10px 50px 10px 50px;">	<p class="jm-font">웹핫팩 예제코드보러가기</p></button>
+			</a></div>	
+			<br>
+			<br>
+			<br>
+			<br>
+
+			
+			<br>
+			<br>
+			<br>
+			<br>
+      <div style=" text-align: center;"> 
+		
+    
+        <H1><div class="hr-sect">잡다한 기능</div></H1>
+    
+    
+
+    <br>
+    <br>
+    <br>
+    <br>
+	<div style=" text-align: center;">
+		<a href="계산기.html" target="_blank" class="con_link">
+			<button style="background-color: #dbff98; padding: 10px 50px 10px 50px;">	<p class="jm-font">계산기</p></button>
+			</a></div>	&nbsp;
+			&nbsp;
+			&nbsp;
+			&nbsp;
+			<div style=" text-align: center;">
+			<a href="" target="_blank" class="con_link">
+				<button style="background-color: #A6EA40; padding: 10px 50px 10px 50px;">	<p class="jm-font">테트리스</p></button>
+				</a></div>	
+
+				<br>
+				<br>
+				<br>
+				<br>
+				<div style=" text-align: center;">
+					<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>testCalendar</title>
+	<style>
+		table
+		{
+			border:1px solid #BDBDBD;
+			text-align:center;
+			width:30%;
+		}
+	</style>
+	 
+	<script language="javascript">
+		var today = new Date(); // 오늘 날짜
+		var date = new Date();
+	 
+		function beforem() //이전 달을 today에 값을 저장
+		{ 
+			today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+			build(); //만들기
+		}
+		
+		function nextm()  //다음 달을 today에 저장
+		{
+			today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+			build();
+		}
+		
+		function build()
+		{
+			var nMonth = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+			var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+			var tbcal = document.getElementById("calendar"); // 테이블 달력을 만들 테이블
+			var yearmonth = document.getElementById("yearmonth"); //  년도와 월 출력할곳
+			yearmonth.innerHTML = today.getFullYear() + "년 "+ (today.getMonth() + 1) + "월"; //년도와 월 출력
+			
+			if(today.getMonth()+1==12) //  눌렀을 때 월이 넘어가는 곳
+			{
+				before.innerHTML=(today.getMonth())+"월";
+				next.innerHTML="1월";
+			}
+			else if(today.getMonth()+1==1) //  1월 일 때
+			{
+			before.innerHTML="12월";
+			next.innerHTML=(today.getMonth()+2)+"월";
+			}
+			else //   12월 일 때
+			{
+				before.innerHTML=(today.getMonth())+"월";
+				next.innerHTML=(today.getMonth()+2)+"월";
+			}
+			
+		   
+			// 남은 테이블 줄 삭제
+			while (tbcal.rows.length > 2) 
+			{
+				tbcal.deleteRow(tbcal.rows.length - 1);
+			}
+			var row = null;
+			row = tbcal.insertRow();
+			var cnt = 0;
+	 
+			// 1일 시작칸 찾기
+			for (i = 0; i < nMonth.getDay(); i++) 
+			{
+				cell = row.insertCell();
+				cnt = cnt + 1;
+			}
+	 
+			// 달력 출력
+			for (i = 1; i <= lastDate.getDate(); i++) // 1일부터 마지막 일까지
+			{ 
+				cell = row.insertCell();
+				cell.innerHTML = i;
+				cnt = cnt + 1;
+				if (cnt % 7 == 1) {//일요일 계산
+					cell.innerHTML = "<font color=#FF9090>" + i//일요일에 색
+				}
+				if (cnt % 7 == 0) { // 1주일이 7일 이므로 토요일 계산
+					cell.innerHTML = "<font color=#7ED5E4>" + i//토요일에 색
+					row = calendar.insertRow();// 줄 추가
+				}
+				if(today.getFullYear()==date.getFullYear()&&today.getMonth()==date.getMonth()&&i==date.getDate()) 
+				{
+					cell.bgColor = "#BCF1B1"; //오늘날짜배경색
+				}
+			}
+	 
+		}
+		
+	</script>
+	 
+	</head>
+	 
+	<body onload="build();">
+		<table align="center" id="calendar">
+			<tr>
+				<td><font size=1%; color="#B3B6B3"><label onclick="beforem()" id="before" ></label></font></td>
+				<td colspan="5" align="center" id="yearmonth"></td>
+				<td><font size=1%; color="#B3B6B3"><label onclick="nextm()" id="next"></label></font></td>
+			</tr>
+			<tr>
+				<td align="center"> <font color="#FF9090">일</font></td>
+				<td align="center"> 월 </td>
+				<td align="center"> 화 </td>
+				<td align="center"> 수 </td>
+				<td align="center"> 목 </td>
+				<td align="center"> 금 </td>
+				<td align="center"><font color=#7ED5E4>토</font></td>
+			</tr></div>
+		</table>
+
+    
+</body>
+ 
+</html>
+				
+		
+
+
+</body>
+</html>
+
+
+</body>
+
+</html>

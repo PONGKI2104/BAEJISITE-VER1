@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>계산기</title>
+    <style>
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+			@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+.jm-font{
+	font-family: 'Black Han Sans', sans-serif;/*웹 폰트 지정*/
+	color: black;
+}
+		#wrapper{
+			width:300px;
+			margin:auto;
+		}
+		#txtContact{
+			width:fit-content;
+			margin:auto;
+		}
+		#btnSubmit{
+			width:100px;
+			margin:auto;
+			display:block;
+		}
+    .hr-sect {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 12px;
+        margin: 8px 0px;
+      }
+      .hr-sect::before,
+      .hr-sect::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+      }
+	</style>
+
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>지환이 사이트</title>
+</head>
+
+ 
+    <header class="header">
+        <div class="header__logo">
+            <a href="#">
+                <h1>BAEJI</h1>
+                <p>BAEJIHWAN SMART</p>
+            </a>
+        </div>
+        <div class="heder__gnb">
+            <ul>
+
+        </div>
+    </header>
+<br>
+<br>
+        
+ 
+    </style>
+    <script>
+      var showresult;
+      var num=1; //몇번째 결과값인지 확인하기 위한 변수
+
+      function send(data) {// 버튼을 누르면 데이터를 id ouput에 표시함
+        output.value = output.value + data;
+      }
+
+      function outputclear(){// output의 데이터를 지움.
+        output.value="";
+      }
+
+      function allclear(){// output input의 데이터를 지움.
+        input.value="";
+        output.value="";
+      }
+
+      function square(){// 제곱
+        showresult = Math.pow(output.value,2);
+        // eval() 문자열을 코드로 인식하게 해줌
+        output.value=showresult;
+      }
+
+      function swap(){// output의 +-를 바꿔줌(반전)
+        output.value=-output.value;
+      }
+
+      function tdelete(){// output의 데이터를 하나 지워줌.
+        output.value = output.value.substring(0, output.value.length-1);
+      }
+
+      function sqrt() {// output의 데이터를 루트.
+        output.value = Math.sqrt(output.value);
+      }
+
+      function sign(data){// output의 데이터를 부호를 붙여서 input에 넣어줌.
+        input.value = input.value+output.value + data;
+        output.value="";
+      }
+
+      function point(){// 1/x계산
+        output.value="1/"+output.value;
+        output.value=eval(output.value);
+      }
+
+
+      function result(){// 결과값 출력 & 계산식, 결과를 기록.
+        input.value=input.value+output.value;
+        showresult = eval(input.value);
+        //eval() 문자열을 코드로 인식하게 해줌
+        list.value+=num+"번째 계산식"+input.value+"\n";
+        input.value="";
+        output.value=showresult;
+        list.value+=num+"번째 결과"+showresult+"\n";
+        num++;
+      }
+    </script>
+  </head>
+  <body>
+    <!--계산기 -->
+    <table border="1">
+      <tr>
+        <td class="aa" colspan="4"><input type="text" id="input" readonly></td>
+      </tr>
+      <tr>
+        <td colspan="4"><input type="text" id="output" readonly></td>
+      </tr>
+      <tr>
+
+      </tr>
+      <tr>
+        <td onclick="outputclear()">CE</td>
+        <td onclick="allclear()">C</td>
+        <td onclick="tdelete()"><</td>
+        <td onclick="sign('/')">÷</td>
+      </tr>
+      <tr>
+        <td onclick="send(7)">7</td>
+        <td onclick="send(8)">8</td>
+        <td onclick="send(9)">9</td>
+        <td onclick="sign('*')">X</td>
+      </tr>
+      <tr>
+        <td onclick="send(4)">4</td>
+        <td onclick="send(5)">5</td>
+        <td onclick="send(6)">6</td>
+        <td onclick="sign('-')">-</td>
+      </tr>
+      <tr>
+        <td onclick="send(1)">1</td>
+        <td onclick="send(2)">2</td>
+        <td onclick="send(3)">3</td>
+        <td onclick="sign('+')">+</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td onclick="send(0)">0</td>
+        <td onclick="send('.')">.</td>
+        <td onclick="result()">=</td>
+      </tr>
+      <tr>
+        <td colspan="4"><textarea id="list" rows="40" cols="22"></textarea></td>
+      </tr>
+    </table>
+  </div>
